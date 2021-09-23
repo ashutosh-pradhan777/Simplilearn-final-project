@@ -21,12 +21,22 @@ const Products = () => {
 
     useEffect(() => {
         //console.log("Hello");
+        let isSubscribed = true;
         const fetch = () => {
             GroceryDataService.getProducts()
-                .then(res => {
-                    fun(res.data)
+                .then(res => 
+                    isSubscribed ? fun(res.data) : null
+                )
+                .catch(err => {
+                    if(isSubscribed)
+                    {
+                        setProducts(prevState => ({
+                            ...prevState,
+                            err
+                          }));
+                    }
                 })
-                .catch(err => console.log(err))
+                return () => (isSubscribed = false)
         }
         //console.log(products);
         fetch()

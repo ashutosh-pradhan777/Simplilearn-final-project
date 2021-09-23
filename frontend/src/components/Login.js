@@ -71,8 +71,8 @@ const Login = ({setUserObject}) => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col align-self-start">
-          <form style={{ "margin": "2em" }}>
+        <div className="col  align-text-top">
+          <form style={{ "margin":"2em" }}>
             <h4>USER LOGIN</h4>
             <div className="mb-3">
               <label htmlFor="username" className="form-label">User Name</label>
@@ -86,7 +86,7 @@ const Login = ({setUserObject}) => {
             <Link to='/register'><button className="btn btn-success">Register Here</button></Link>
           </form>
         </div>
-        <div className="col align-self-end">
+        <div className="col align-text-top">
           <form style={{ "margin": "2em" }}>
             <h4>ADMIN LOGIN</h4>
             <div className="mb-3">
