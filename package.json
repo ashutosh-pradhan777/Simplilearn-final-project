@@ -1,0 +1,25 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "backend": "cd backend && npm install && node index.js",
+    "frontend" : "cd frontend && npm install  && npm start",
+    "start" : "npm i && concurrently --kill-others \"npm run backend\" \"npm run frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashutosh-pradhan777/Simplilearn-final-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashutosh-pradhan777/Simplilearn-final-project/issues"
+  },
+  "homepage": "https://github.com/ashutosh-pradhan777/Simplilearn-final-project#readme",
+  "dependencies": {
+    "concurrently": "^6.2.1"
+  }
+}
